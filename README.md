@@ -13,3 +13,10 @@ In terminal
 
 In terminal
 1. run command ```pip install boto3```
+
+## Instalation for Twitter data
+
+In terminal
+1. run command ```pip install searchtweets```
+2. run command ```pip install searchtweets-v2```
+3. run command ```pip install tweepy```
