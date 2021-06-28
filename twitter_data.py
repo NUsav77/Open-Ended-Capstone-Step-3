@@ -2,6 +2,10 @@
 import secrets  # contains Twitter Dev keys in local
 import tweepy
 import pandas as pd
+import matplotlib.pyplot as plt
+import re
+import spacy
+
 
 
 
@@ -29,7 +33,7 @@ storm_q_cursor = tweepy.Cursor(api.search, q='tropical storm', tweet_mode='exten
 
 
 
-# Get full information on a single tweet
+# Get full information on multiple tweets containing a keyword
 number_of_tweets = 10
 tweets = []
 likes = []
@@ -42,3 +46,9 @@ for tweet in tweepy.Cursor(api.search, q='evacuate', tweet_mode='extended').item
 
 df = pd.DataFrame({'tweets':tweets,'likes':likes,'time':time})
 print(df)
+
+
+
+# Remove retweets from query results
+df_no_rt = df[~df.tweets.str.contains('RT')]
+print(df_no_rt)
