@@ -8,6 +8,12 @@ boto3 = "*"
 pandas = "*"
 nexradaws = "*"
 matplotlib = "*"
+metpy = "*"
+geos = "*"
+shapely = "*"
+pyshp = "*"
+proj = "*"
+osgeo4w-installer = "*"
 
 [dev-packages]
 
